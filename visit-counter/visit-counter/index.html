@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />   
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<title>Accordion</title>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript">
+ $(function() {
+    $( "#accordion" ).accordion({
+      collapsible: true,
+      heightStyle: "content"
+    });
+    
+  });
+ $( document ).ready(function() {
+   $( ".graph-link" ).click(function() {
+            $(".list-container-class").hide("slide", { direction: "left" }, 300);
+                  if($(window).width()<=460){
+                     $(".graph-container-class").animate({
+                           width: "100%"
+                        }, 200);
+                  }
+                  else{
+                      $(".graph-container-class").animate({
+                       width: "91%"
+                     }, 200);
+                  }
+                   
+            $(".graph-container-class").show("slide", { direction: "right" }, 300);
+
+            $(".graph-container-class").removeClass("righ-aligned");
+            
+            $(".graph-link").addClass("active-link");
+            $(".list-link").removeClass("active-link");
+        });
+
+         $(".list-link" ).click(function() {
+           $(".graph-container-class").animate({
+                    width: "0px"
+          }, 500);
+            $(".graph-container-class").hide("slide", { direction: "left" }, 300);
+           $(".graph-container-class").addClass("righ-aligned");
+
+            $(".list-container-class").show("slide", { direction: "left" }, 300);
+            $(".list-link").addClass("active-link");
+            $(".graph-link").removeClass("active-link");
+        });
+
+         $(".graph-link").on("swipe",function(){
+           $( ".graph-link" ).click();
+          });
+          $(".list-link").on("swipe",function(){
+           $( ".list-link" ).click();
+          });
+ 
+});
+ 
+
+
+</script>
+<body>
+<div class="container">
+<div id="accordion">
+
+  <div class="accordian-title-container"><img class="accordian-title-logo float-left" src="images/no-image1.png">
+       <div class="accordian-heading float-left">
+            <div class="width-100 center-aligned">
+             <h3> Browse</h3>
+             <span>From 9.15 to 9.30</span>
+             </div>
+
+        </div>
+            <span class="counter bold">14</span>
+
+   </div>
+  <div>
+    <div class="accordian-title-logo float-left height-ten-pixle"></div>
+    <div class="accordian-heading float-left">
+        <span class="list-graph-toggle-container">
+            <a href="#" class="graph-toggle-link border-right list-link active-link">
+                <img src="images/list-icon.png" class="graph-toggle-icon">
+            </a>   
+            <a href="#" class="graph-toggle-link graph-link"> 
+                <img src="images/graph-icon.png" class="graph-toggle-icon">
+            </a> 
+        </span>
+        
+    </div>
+    <div class="clear-all list-container-class" id="list-container">
+        <div class="details">
+                <div class="clear-all">
+                    <h4 class="list-title">Music Listen</h4>
+                    <div class="time-stamp">09:10</div>
+                </div>
+                <div class="clear-all">
+                    <span>Track Name :</span>
+                    <span>&ldquo;Nothing it can&rdquo;</span>  
+                </div>
+        </div>
+
+        <div class="details">
+                <div class="clear-all">
+                    <h4 class="list-title">Music Listen</h4>
+                    <div class="time-stamp">09:10</div>
+                </div>
+                <div class="clear-all">
+                    <span>Track Name :</span>
+                    <span>&ldquo;Nothing it can&rdquo;</span>  
+                </div>
+        </div>
+    
+         <div class="details">
+                <div class="clear-all">
+                    <h4 class="list-title">Music Listen</h4>
+                    <div class="time-stamp">09:10</div>
+                </div>
+                <div class="clear-all">
+                    <span>Track Name :</span>
+                    <span>&ldquo;Nothing it can&rdquo;</span>  
+                </div>
+        </div>
+
+    </div> 
+    <div class="clear-all">
+      <div class="accordian-title-logo float-left height-ten-pixle hide-on-mobile"></div>
+      <div class="clear-all graph-container-class accordian-heading righ-aligned" id="graph-container" style="display:none">
+          
+          <iframe src="http://app.1self.co/v1/users/m/events/google/browse/sum(times-visited)/daily/barchart?shareToken=5f69fd21769da5e3d307deab47190f9d2aa2b4841c9d3d84a76875162bb466e4&bgColor=00a2d4" class="graph-iframe">
+          </iframe>
+      </div>
+    </div>
+
+  </div>
+
+    <div class="accordian-title-container"><img class="accordian-title-logo float-left" src="images/lastfm.png">
+       <div class="accordian-heading float-left">
+            <div class="width-100 center-aligned">
+             <h3> Browse</h3>
+             <span>From 9.15 to 9.30</span>
+             </div>
+
+        </div>
+            <span class="counter bold">14</span>
+
+   </div>
+  <div>
+    <div class="accordian-title-logo float-left height-ten-pixle"></div>
+    <div class="accordian-heading float-left">
+        <span class="list-graph-toggle-container">
+            <a href="#" class="graph-toggle-link border-right list-link active-link">
+                <img src="images/list-icon.png" class="graph-toggle-icon">
+            </a>   
+            <a href="#" class="graph-toggle-link graph-link"> 
+                <img src="images/graph-icon.png" class="graph-toggle-icon">
+            </a> 
+        </span>
+        
+    </div>
+    <div class="clear-all list-container-class" id="list-container">
+        <div class="details">
+                <div class="float-left">
+                    <h4>Music Listen</h4>
+                    <span>Track Name :</span>
+                    <span>&ldquo;Nothing it can&rdquo;</span>  
+                </div>
+                   <div class="time-stamp">09:10</div>
+        </div>
+        <div class="details">
+             <div class="float-left">
+                <h4>Music Listen</h4>
+                <span>Track Name :</span>
+                <span>&ldquo;Billie Jean&rdquo;</span>  
+             </div>   
+                <div class="time-stamp">09:00</div>
+        </div>
+        <div class="details">
+             <div class="float-left">
+                <h4>Music Listen</h4>
+                <span>Track Name :</span>
+                <span>&ldquo;Off The Wall&rdquo;</span> 
+              </div>  
+                <div class="time-stamp">08:20</div> 
+        </div>
+    </div> 
+    <div class="clear-all">
+      <div class="accordian-title-logo float-left height-ten-pixle hide-on-mobile"></div>
+      <div class="clear-all graph-container-class accordian-heading" id="graph-container" style="display:none">
+          
+          <iframe src="http://app.1self.co/v1/users/m/events/google/browse/sum(times-visited)/daily/barchart?shareToken=5f69fd21769da5e3d307deab47190f9d2aa2b4841c9d3d84a76875162bb466e4&bgColor=00a2d4" class="graph-iframe">
+          </iframe>
+      </div>
+    </div>
+
+  </div>
+
+ <div class="accordian-title-container"><img class="accordian-title-logo float-left" src="images/visit-counter-icon.png">
+       <div class="accordian-heading float-left">
+            <div class="width-100 center-aligned">
+             <h3> Browse</h3>
+             <span>From 9.15 to 9.30</span>
+             </div>
+
+        </div>
+            <span class="counter bold">14</span>
+
+   </div>
+  <div>
+    <div class="accordian-title-logo float-left height-ten-pixle"></div>
+    <div class="accordian-heading float-left">
+        <span class="list-graph-toggle-container">
+            <a href="#" class="graph-toggle-link border-right list-link active-link">
+                <img src="images/list-icon.png" class="graph-toggle-icon">
+            </a>   
+            <a href="#" class="graph-toggle-link graph-link"> 
+                <img src="images/graph-icon.png" class="graph-toggle-icon">
+            </a> 
+        </span>
+        
+    </div>
+    <div class="clear-all list-container-class" id="list-container">
+        <div class="details">
+                <div class="float-left">
+                    <h4>Music Listen</h4>
+                    <span>Track Name :</span>
+                    <span>&ldquo;Nothing it can&rdquo;</span>  
+                </div>
+                   <div class="time-stamp">09:10</div>
+        </div>
+        <div class="details">
+             <div class="float-left">
+                <h4>Music Listen</h4>
+                <span>Track Name :</span>
+                <span>&ldquo;Billie Jean&rdquo;</span>  
+             </div>   
+                <div class="time-stamp">09:00</div>
+        </div>
+        <div class="details">
+             <div class="float-left">
+                <h4>Music Listen</h4>
+                <span>Track Name :</span>
+                <span>&ldquo;Off The Wall&rdquo;</span> 
+              </div>  
+                <div class="time-stamp">08:20</div> 
+        </div>
+    </div> 
+    <div class="clear-all">
+      <div class="accordian-title-logo float-left height-ten-pixle hide-on-mobile"></div>
+      <div class="clear-all graph-container-class accordian-heading" id="graph-container" style="display:none">
+          
+          <iframe src="http://app.1self.co/v1/users/m/events/google/browse/sum(times-visited)/daily/barchart?shareToken=5f69fd21769da5e3d307deab47190f9d2aa2b4841c9d3d84a76875162bb466e4&bgColor=00a2d4" class="graph-iframe">
+          </iframe>
+      </div>
+    </div>
+
+  </div>
+  <div class="accordian-title-container"><img class="accordian-title-logo float-left" src="images/github.png">
+       <div class="accordian-heading float-left">
+            <div class="width-100 center-aligned">
+             <h3> Browse</h3>
+             <span>From 9.15 to 9.30</span>
+             </div>
+
+        </div>
+            <span class="counter bold">14</span>
+
+   </div>
+  <div>
+    <div class="accordian-title-logo float-left height-ten-pixle"></div>
+    <div class="accordian-heading float-left">
+        <span class="list-graph-toggle-container">
+            <a href="#" class="graph-toggle-link border-right list-link active-link">
+                <img src="images/list-icon.png" class="graph-toggle-icon">
+            </a>   
+            <a href="#" class="graph-toggle-link graph-link"> 
+                <img src="images/graph-icon.png" class="graph-toggle-icon">
+            </a> 
+        </span>
+        
+    </div>
+    <div class="clear-all list-container-class" id="list-container">
+        <div class="details">
+                <div class="float-left">
+                    <h4>Music Listen</h4>
+                    <span>Track Name :</span>
+                    <span>&ldquo;Nothing it can&rdquo;</span>  
+                </div>
+                   <div class="time-stamp">09:10</div>
+        </div>
+        <div class="details">
+             <div class="float-left">
+                <h4>Music Listen</h4>
+                <span>Track Name :</span>
+                <span>&ldquo;Billie Jean&rdquo;</span>  
+             </div>   
+                <div class="time-stamp">09:00</div>
+        </div>
+        <div class="details">
+             <div class="float-left">
+                <h4>Music Listen</h4>
+                <span>Track Name :</span>
+                <span>&ldquo;Off The Wall&rdquo;</span> 
+              </div>  
+                <div class="time-stamp">08:20</div> 
+        </div>
+    </div> 
+    <div class="clear-all">
+      <div class="accordian-title-logo float-left height-ten-pixle hide-on-mobile"></div>
+      <div class="clear-all graph-container-class accordian-heading" id="graph-container" style="display:none">
+          
+          <iframe src="http://app.1self.co/v1/users/m/events/google/browse/sum(times-visited)/daily/barchart?shareToken=5f69fd21769da5e3d307deab47190f9d2aa2b4841c9d3d84a76875162bb466e4&bgColor=00a2d4" class="graph-iframe">
+          </iframe>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div> 
+ 
+</body>
+</html>	

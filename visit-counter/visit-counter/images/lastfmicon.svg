@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="118px" height="118px" viewBox="0 0 118 118" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>lastfmicon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Mobile-Portrait-7" sketch:type="MSArtboardGroup" transform="translate(-236.000000, -442.000000)">
+            <g id="integrations" sketch:type="MSLayerGroup" transform="translate(101.000000, 443.000000)">
+                <g id="LastFm" transform="translate(139.000000, 1.000000)" sketch:type="MSShapeGroup">
+                    <g id="lastfmicon">
+                        <path d="M55,110 C85.3756612,110 110,85.3756612 110,55 C110,24.6243388 85.3756612,0 55,0 C24.6243388,0 0,24.6243388 0,55 C0,85.3756612 24.6243388,110 55,110 Z" id="Path-8" fill="#DD2649"></path>
+                        <g id="Path-2-+-Path-3-+-Path-4-+-Oval-2-+-Path-5-+-Path-6" transform="translate(16.334049, 33.191011)" fill="#F7F7FA">
+                            <g id="Oval-2-+-Path-5-+-Path-6">
+                                <path d="M29.6827358,31.1287145 C1.03774836,47.9207698 3.46066549,1.00984074 24.3769422,8.40424752 C37.55399,14.6598803 26.1125015,36.5845748 52.4514975,42.8383662 C82.096419,46.7038873 79.5095994,21.5743182 62.5953819,18.2376829 C45.7387239,15.0754142 58.2040866,0.668471569 66.278154,11.666455 L74.150118,11.6550934 C69.6687409,-7.02764492 44.6538703,0.194814906 44.6538703,11.6664549 C44.6538703,28.4043351 67.3023508,23.7887489 66.278154,31.1287145 C64.8135171,38.2745012 54.9781765,37.3819782 47.7855687,32.2225169 C38.3884084,23.2472386 41.8610756,12.113549 33.1636627,4.63445722 C24.4494723,-3.89293817 0.00864741009,-1.36975069 0.00864741009,21.1635183 C1.70987749,55.2944 33.1636627,38.8868436 33.1636627,38.8868436 C33.1636627,38.8868436 30.8948396,33.2137499 29.6827358,31.1287145 Z" id="Path-7"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />   
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<title>Layout</title>
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+</head>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+$( document ).ready(function() {
+		$(".link").click(function(){
+			$(".social-img").removeClass("box-shadow-none");
+			var currentElement = this;
+			$(this.children).addClass("box-shadow-none");
+	});
+	
+});
+
+</script>
+<body>
+	<div class="wrapper">
+		<div class="welcome-container">
+			<div class="logo left-aligned">
+				<div class="dot left-dot"></div>
+				<img src="images/avatar.png" class="avatar">
+				<div class="dot right-dot"></div>
+			</div>
+			<div class="welcome-message left-aligned">
+				<div class="welcome-message-wrapper">
+				<h1 class="orange-color welcome-heading">
+					Welcome, <span>Ed</span>
+				</h1>
+				<p class="welcome-details">
+					Great news!You've qualified to get 1self free for 2 years.
+				</p>
+				</div>
+			</div>
+		</div>	
+		<div class="divider">
+			<div class="middle-dot-container">
+				<span class="middle-dot"></span>
+			</div>
+		</div>	
+		<p class="padding-one-percent paragraph-text">Now, start uniting your data and start living a smarter life</p>
+		<div class="social-container">
+			<div class="social-img-container">
+				<a href="#" class="link">
+					<img src="images/twittericon.svg" class="social-img twitter">
+				</a>
+				<span class="social-group-title">twitter</span>
+			</div>
+			<div class="social-img-container" >
+				<a href="#" class="link">
+					<img src="images/lastfmicon.svg" class="social-img last-fm">
+				</a>
+				<span class="social-group-title">lastfm</span>
+			</div>
+			<div class="social-img-container" >
+				<a href="#" class="link">
+					<img src="images/githubicon.svg" class="social-img github">
+				</a>	
+				<span class="social-group-title">github</span>
+			</div>
+			<div class="social-img-container">
+				<a href="#" class="link">
+					<img src="images/instagramicon.svg" class="social-img instagram">
+				</a>	
+				<span class="social-group-title">instagram</span>
+			</div>
+			<div class="social-img-container">
+				<a href="#" class="link">
+					<img src="images/googlefiticon.svg" class="social-img google-fit">
+				</a>	
+				<span class="social-group-title">google fit</span>
+			</div>
+			<div class="social-img-container">
+				<a href="#" class="link">
+					<img src="images/another.svg" class="social-img another">
+				</a>	
+				<span class="social-group-title">another</span>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html> 
